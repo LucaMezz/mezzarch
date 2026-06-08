@@ -1,6 +1,9 @@
+aylurs-gtk-shell-git
 elephant
 elephant-desktopapplications
 libastal-gjs-git
+libastal-hyprland-git
+libastal-meta
 walker
 yay
 yay-debug

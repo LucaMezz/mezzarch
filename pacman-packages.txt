@@ -1,11 +1,17 @@
 amd-ucode
 base
 base-devel
+chromium
+cmake
+docker
+docker-compose
 dolphin
 dunst
 efibootmgr
 flatpak
+fzf
 git
+github-cli
 grim
 grub
 htop
@@ -15,6 +21,7 @@ imagemagick
 jq
 keychain
 kitty
+lazygit
 libva-nvidia-driver
 linux
 linux-firmware
@@ -25,6 +32,7 @@ nano
 neovim
 network-manager-applet
 networkmanager
+ninja
 nvidia-open
 nvm
 os-prober
@@ -35,6 +43,7 @@ polkit-kde-agent
 qt5-wayland
 qt6-wayland
 rofi
+rustup
 sddm
 slurp
 smartmontools

@@ -1,6 +1,3 @@
-UNIT FILE              STATE   PRESET
-pipewire-pulse.service enabled enabled
-pipewire.service       enabled enabled
-wireplumber.service    enabled enabled
-
-3 unit files listed.
+pipewire-pulse.service
+pipewire.service
+wireplumber.service
