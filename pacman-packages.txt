@@ -8,6 +8,7 @@ cmake
 docker
 docker-compose
 dolphin
+duf
 dunst
 efibootmgr
 eza
@@ -18,6 +19,7 @@ fzf
 git
 git-delta
 github-cli
+glow
 grim
 grub
 gst-libav
@@ -53,6 +55,7 @@ pipewire-alsa
 pipewire-pulse
 polkit-kde-agent
 postgresql-libs
+procs
 qt5-wayland
 qt6-wayland
 rofi
@@ -62,6 +65,7 @@ slurp
 smartmontools
 stow
 sudo
+tealdeer
 texlive-basic
 texlive-binextra
 texlive-fontsrecommended
@@ -70,6 +74,7 @@ texlive-latexextra
 texlive-latexrecommended
 texlive-mathscience
 texlive-pictures
+thefuck
 tree
 ttf-jetbrains-mono-nerd
 ufw
@@ -85,6 +90,7 @@ wpa_supplicant
 xdg-desktop-portal-hyprland
 xdg-utils
 yazi
+yq
 zathura
 zathura-pdf-mupdf
 zoxide
