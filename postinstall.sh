@@ -7,6 +7,8 @@ set -uo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_REPO="https://github.com/LucaMezz/dotfiles.git"
 DOTFILES_DIR="$HOME/dotfiles"
+WALLPAPERS_REPO="https://github.com/LucaMezz/wallpapers.git"
+WALLPAPERS_DIR="${XDG_PICTURES_DIR:-$HOME/pictures}/wallpapers"
 LOG_FILE="/tmp/postinstall-$(date +%Y%m%d-%H%M%S).log"
 ERRORS=0
 SPINNER_PID=""
@@ -280,6 +282,19 @@ do_dotfiles() {
     fi
 }
 
+do_wallpapers() {
+    section "Wallpapers"
+
+    if [[ -d "$WALLPAPERS_DIR/.git" ]]; then
+        skip "Wallpapers repo already exists at $WALLPAPERS_DIR"
+        spin_run "Pulling latest wallpapers" git -C "$WALLPAPERS_DIR" pull || true
+    else
+        mkdir -p "$(dirname "$WALLPAPERS_DIR")"
+        spin_run "Cloning wallpapers from GitHub" \
+            git clone "$WALLPAPERS_REPO" "$WALLPAPERS_DIR"
+    fi
+}
+
 do_summary() {
     echo
     if [[ $ERRORS -eq 0 ]]; then
@@ -319,6 +334,7 @@ main() {
     do_user_services
     do_shell
     do_dotfiles
+    do_wallpapers
     do_summary
 }
 
