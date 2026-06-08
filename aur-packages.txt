@@ -1,0 +1,6 @@
+elephant
+elephant-desktopapplications
+libastal-gjs-git
+walker
+yay
+yay-debug

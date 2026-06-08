@@ -1,0 +1,10 @@
+UNIT FILE                          STATE   PRESET
+getty@.service                     enabled enabled
+NetworkManager-dispatcher.service  enabled disabled
+NetworkManager-wait-online.service enabled disabled
+NetworkManager.service             enabled disabled
+ollama.service                     enabled disabled
+sddm.service                       enabled disabled
+systemd-timesyncd.service          enabled enabled
+
+7 unit files listed.

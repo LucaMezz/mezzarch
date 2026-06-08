@@ -1,0 +1,174 @@
+{
+    "app_config": null,
+    "archinstall-language": "English",
+    "auth_config": {},
+    "bootloader_config": {
+        "bootloader": "Grub",
+        "removable": true,
+        "uki": true
+    },
+    "custom_commands": [],
+    "disk_config": {
+        "btrfs_options": {
+            "snapshot_config": null
+        },
+        "config_type": "manual_partitioning",
+        "device_modifications": [
+            {
+                "device": "/dev/sda",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "6fa3df94-b619-4139-ac57-318a0d997e42",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": "/",
+                        "obj_id": "e9a9c776-c442-4acd-8d8b-57f805bd5bf0",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 50
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "linux-home"
+                        ],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": "/home",
+                        "obj_id": "14bfa907-07e8-4073-bf76-dce5a1d606ae",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 969446260736
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 54761881600
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "hostname": "desktop",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_AU"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {
+            "Australia": [
+                "https://mirror.aarnet.edu.au/pub/archlinux/$repo/os/$arch",
+                "http://ftp.swin.edu.au/archlinux/$repo/os/$arch",
+                "http://syd.mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "https://syd.mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "http://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch",
+                "https://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch",
+                "http://au.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://au.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://gsl-syd.mm.fcix.net/archlinux/$repo/os/$arch",
+                "https://gsl-syd.mm.fcix.net/archlinux/$repo/os/$arch",
+                "https://au.arch.niranjan.co/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": [
+            "multilib"
+        ]
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [],
+    "pacman_config": {
+        "color": true,
+        "parallel_downloads": 5
+    },
+    "profile_config": {
+        "gfx_driver": "Nvidia (open kernel module for newer GPUs, Turing+)",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
+            "details": [
+                "Hyprland"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "zstd",
+        "enabled": true
+    },
+    "timezone": "Australia/Melbourne",
+    "version": "4.3"
+}
