@@ -6,3 +6,4 @@ NetworkManager.service
 ollama.service
 sddm.service
 systemd-timesyncd.service
+ufw.service
