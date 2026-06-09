@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="logo.png" alt="mezzarch logo" width="200"/>
+
 # mezzarch
 
 **A fully automated Arch Linux installation and post-install setup for my personal desktop environment.**
