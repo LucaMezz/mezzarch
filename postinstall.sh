@@ -125,7 +125,7 @@ do_system_update() {
 
 do_pacman_packages() {
     section "Official Packages"
-    local list="$SCRIPT_DIR/pacman-packages.txt"
+    local list="$SCRIPT_DIR/lists/pacman-packages.txt"
 
     if [[ ! -f "$list" ]]; then
         fail "Package list not found: $list"
@@ -162,7 +162,7 @@ do_aur_helper() {
 
 do_aur_packages() {
     section "AUR Packages"
-    local list="$SCRIPT_DIR/aur-packages.txt"
+    local list="$SCRIPT_DIR/lists/aur-packages.txt"
 
     if [[ ! -f "$list" ]]; then
         warn "AUR package list not found: $list"
@@ -190,7 +190,7 @@ do_flatpak() {
         sudo flatpak remote-add --if-not-exists flathub \
             https://dl.flathub.org/repo/flathub.flatpakrepo
 
-    local list="$SCRIPT_DIR/flatpak-apps.txt"
+    local list="$SCRIPT_DIR/lists/flatpak-apps.txt"
     if [[ ! -f "$list" ]]; then
         warn "Flatpak app list not found: $list"
         return
@@ -208,7 +208,7 @@ do_flatpak() {
 
 do_system_services() {
     section "System Services"
-    local list="$SCRIPT_DIR/enabled-system-services.txt"
+    local list="$SCRIPT_DIR/lists/enabled-system-services.txt"
 
     if [[ ! -f "$list" ]]; then
         warn "System services list not found: $list"
@@ -222,7 +222,7 @@ do_system_services() {
 
 do_user_services() {
     section "User Services"
-    local list="$SCRIPT_DIR/enabled-user-services.txt"
+    local list="$SCRIPT_DIR/lists/enabled-user-services.txt"
 
     if [[ ! -f "$list" ]]; then
         warn "User services list not found: $list"

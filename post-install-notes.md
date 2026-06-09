@@ -1,3 +1,0 @@
-# ArchLinux Post Install Notes
-
-
