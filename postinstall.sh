@@ -9,6 +9,8 @@ DOTFILES_REPO="https://github.com/LucaMezz/dotfiles.git"
 DOTFILES_DIR="$HOME/dotfiles"
 WALLPAPERS_REPO="https://github.com/LucaMezz/wallpapers.git"
 WALLPAPERS_DIR="${XDG_PICTURES_DIR:-$HOME/pictures}/wallpapers"
+LATEX_TEMPLATES_REPO="https://github.com/LucaMezz/latex-templates.git"
+LATEX_TEMPLATES_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/latex-templates"
 LOG_FILE="/tmp/postinstall-$(date +%Y%m%d-%H%M%S).log"
 ERRORS=0
 SPINNER_PID=""
@@ -295,6 +297,19 @@ do_wallpapers() {
     fi
 }
 
+do_latex_templates() {
+    section "LaTeX Templates"
+
+    if [[ -d "$LATEX_TEMPLATES_DIR/.git" ]]; then
+        skip "LaTeX templates repo already exists at $LATEX_TEMPLATES_DIR"
+        spin_run "Pulling latest LaTeX templates" git -C "$LATEX_TEMPLATES_DIR" pull || true
+    else
+        mkdir -p "$LATEX_TEMPLATES_DIR"
+        spin_run "Cloning LaTeX templates from GitHub" \
+            git clone "$LATEX_TEMPLATES_REPO" "$LATEX_TEMPLATES_DIR"
+    fi
+}
+
 do_summary() {
     echo
     if [[ $ERRORS -eq 0 ]]; then
@@ -335,6 +350,7 @@ main() {
     do_shell
     do_dotfiles
     do_wallpapers
+    do_latex_templates
     do_summary
 }
 
