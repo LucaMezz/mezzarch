@@ -4,6 +4,11 @@ elephant-desktopapplications
 libastal-gjs-git
 libastal-hyprland-git
 libastal-meta
+paru
+sddm-astronaut-theme
+tty-clock
+vitetris
 walker
+xdg-ninja
 yay
 yay-debug

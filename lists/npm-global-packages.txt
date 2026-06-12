@@ -1,2 +1,4 @@
 cli
+license
 npm
+typeracer-cli

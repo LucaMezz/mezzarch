@@ -1,1 +1,2 @@
 app.zen_browser.zen
+com.spotify.Client
